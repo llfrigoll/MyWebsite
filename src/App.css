@@ -1,0 +1,9 @@
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  margin-right: 250px; /* Add margin to account for the sliding navbar */
+  padding: 1rem;
+}

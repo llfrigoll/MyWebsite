@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-.content {
-  margin-right: 250px; /* Add margin to account for the sliding navbar */
+.home {
+  padding-right: 250px; /* Space for the navbar to slide out */
   padding: 1rem;
 }

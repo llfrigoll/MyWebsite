@@ -21,10 +21,6 @@
     right: 190px;
   }
 
-  .burger-menu.open:hover {
-    color:#32ff7e;
-  }
-
 .navbar {
     position: fixed;
     top: 0;
@@ -64,38 +60,67 @@
   .navbar-item a {
     color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, font-size 0.3s ease;
   }
   
   .navbar-item a:hover {
-    color: #32ff7e;
+    color: #7cafd8;
   }
 
   .home {
-    border: 2px solid red;
     display: flex;
     flex-direction: column;
     background-color: #333;
-    height: 75vh;
-    align-items: center;
+    height: 85vh;
     justify-content: center;
   }
 
   .heading {
-    border: 2px solid red;
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 70%;
+    margin-top: -5rem;
+    margin-left: 10rem;
+    margin-right: auto;
+    justify-content: center;
+    z-index: 1;
   }
 
   .heading > img {
-    width: 50%;
+    width: 18vw;
+    margin-top: -1rem;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
-  .heading > h1 {
-    font-size: 40px;
+  .heading-text > h1 {
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: -2rem;
+    padding-left: 2rem;
+  }
+
+  .heading-text > h2 {
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: -2rem;
+    font-weight: 500;
+    padding-left: 2rem;
   }
 
   .subheading {
-    border: 2px solid red;
+    width: 52%;
+    margin-left: 18rem;
+    margin-right: auto;
+    background-color: #fff;
+    margin-top: -7rem;
+    height: 50px;
+  }
+
+  .subheading > p {
+    width: fit-content;
+    margin-left: auto;
+    font-size: 20px;
+    margin-top: 12px;
+    padding-right: 1rem;
   }

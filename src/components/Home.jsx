@@ -7,10 +7,13 @@ const Home = () => {
     <div className="home">
         <div className="heading">
             <img src={me} alt="Picture of Franz"/>
-            <h1>Hi, I'm Franz Pretorius</h1>
+            <div className="heading-text">
+              <h2>Hi, I'm</h2>
+              <h1>Franz Pretorius</h1>
+            </div>
         </div>
         <div className="subheading">
-            <p>bleh</p>
+            <p>Front-End Developer</p>
         </div>
     </div>
   )

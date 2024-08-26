@@ -4,7 +4,7 @@ import me from '../assets/pfp.jpg'
 
 const Home = () => {
   return (
-    <div className="home">
+    <div className="home" id="home">
         <div className="heading">
             <img src={me} alt="Picture of Franz"/>
             <div className="heading-text">

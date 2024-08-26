@@ -124,3 +124,32 @@
     margin-top: 12px;
     padding-right: 1rem;
   }
+
+  .tech-stack-section {
+    height: 85vh;
+    background-color: #000;
+    position: relative;
+  }
+  
+  .tech-stack-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .tech-stack-icons.visible {
+    opacity: 1;
+  }
+  
+  .tech-icon {
+    width: 50px;
+    height: 50px;
+    /* Adjust size as needed */
+  }
+  

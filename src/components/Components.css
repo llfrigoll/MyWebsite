@@ -54,7 +54,7 @@
   }
   
   .navbar-item {
-    font-size: 1.2rem;
+    font-size: 1.2rem; 
   }
   
   .navbar-item a {
@@ -64,14 +64,15 @@
   }
   
   .navbar-item a:hover {
-    color: #7cafd8;
+    color: #aaa;
+    font-size: 1.1rem;
   }
 
   .home {
     display: flex;
     flex-direction: column;
     background-color: #333;
-    height: 85vh;
+    height: 100vh;
     justify-content: center;
     padding-right: 250px; /* Space for the navbar to slide out */
     padding: 1rem;
@@ -138,7 +139,7 @@
   .tech-stack-heading {
     background: linear-gradient(to bottom, #333 40%, #555);
   }
-
+  
   .tech-stack-heading > h1 {
     font-size: 60px;
     color: #fff;
@@ -146,12 +147,18 @@
     text-align: center;
     border: none;
     width: fit-content;
+    margin-left: -650px;
     padding: 1rem;
-    margin-left: auto;
-    margin-right: auto;
     padding-top: 2rem;
     letter-spacing: 2rem;
     word-spacing: 3rem;
+    opacity: 0;
+    transition: margin-left 1s ease, opacity 1s ease;
+  }
+
+  .tech-stack-heading.visible > h1 {
+    margin-left: 416px;
+    opacity: 1;
   }
   
   .tech-stack-icons {

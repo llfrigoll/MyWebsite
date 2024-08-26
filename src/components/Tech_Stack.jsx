@@ -37,6 +37,20 @@ const Tech_Stack = () => {
   
     // Set the visibility percentage for the opacity
     setIsVisible(visibilityPercentage);
+
+    const heading = document.getElementById('tech-stack-heading')
+    const headingRect = heading.getBoundingClientRect()
+
+    const headingHeight = headingRect.height;
+    const visibleHeadingHeight = Math.max(0, Math.min(headingRect.bottom, windowHeight) - Math.max(headingRect.top, 0));
+
+    let headingVisibilityPercentage = visibleHeadingHeight / headingHeight
+
+    if(headingVisibilityPercentage > 0.8) {
+      heading.classList.add('visible')
+    }else {
+      heading.classList.remove('visible')
+    }
   };
   
   
@@ -50,7 +64,7 @@ const Tech_Stack = () => {
 
   return (
     <>
-    <div className="tech-stack-heading">
+    <div className="tech-stack-heading" id="tech-stack-heading">
         <h1>Tech Stack</h1>
         <br />
     </div>

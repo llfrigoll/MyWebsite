@@ -73,6 +73,8 @@
     background-color: #333;
     height: 85vh;
     justify-content: center;
+    padding-right: 250px; /* Space for the navbar to slide out */
+    padding: 1rem;
   }
 
   .heading {
@@ -127,14 +129,14 @@
 
   .tech-stack-section {
     height: 85vh;
-    background: linear-gradient(to bottom, #333, #fff);
+    background: linear-gradient(to bottom, #555, #fff);
     position: relative;
     overflow: hidden; /* Ensure the icons stay within the section */
-    padding-top: 10rem;
+    padding-top: 3rem;
   }
 
   .tech-stack-heading {
-    background-color: #333;
+    background: linear-gradient(to bottom, #333 40%, #555);
   }
 
   .tech-stack-heading > h1 {
@@ -160,7 +162,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0; /* Base opacity */
-    transition: opacity 0.3s ease-in-out; /* Faster transition for smoother effect */
+    transition: opacity 0.2s ease-in-out; /* Faster transition for smoother effect */
     margin-top: 50px;
     margin-bottom: 50px;
   }
@@ -170,11 +172,11 @@
   }
 
   .tech-stack-icons > img {
-    transition: scale 0.3s ease-in-out;
+    transition: scale 0.2s ease-in-out;
   }
 
   .tech-stack-icons.visible > img {
-    scale: calc(var(--visibility-percentage, 0))
+    scale: calc(var(--visibility-percentage, 0));
   }
   
   
@@ -184,5 +186,9 @@
     border-radius: 50%; /* Makes the element circular */
     overflow: visible;
   }
-  
-  
+
+  .about-me {
+    display: flex;
+    background: #fff;
+    height: 85vh;
+  } 

@@ -2,8 +2,3 @@
   display: flex;
   flex-direction: column;
 }
-
-.home {
-  padding-right: 250px; /* Space for the navbar to slide out */
-  padding: 1rem;
-}

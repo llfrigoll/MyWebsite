@@ -32,7 +32,7 @@ const Tech_Stack = () => {
     if (visibilityPercentage < 0.35) {
       visibilityPercentage = 0; // Set opacity to 0 if less than 25% is visible
     } else {
-      visibilityPercentage = (visibilityPercentage - 0.35) / 0.65; // Normalize to start from 25% visibility
+      visibilityPercentage = (visibilityPercentage - 0.30) / 0.65; // Normalize to start from 25% visibility
     }
   
     // Set the visibility percentage for the opacity
@@ -52,6 +52,7 @@ const Tech_Stack = () => {
     <>
     <div className="tech-stack-heading">
         <h1>Tech Stack</h1>
+        <br />
     </div>
     <div id="tech-stack-section" className="tech-stack-section">
         <div className="tech-stack-icons visible" style={{ '--visibility-percentage': isVisible }} >

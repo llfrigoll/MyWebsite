@@ -8,17 +8,18 @@
     right: 10px;
     color: #fff;
     border: none;
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 10px;
+    padding: 5px 10px;
     cursor: pointer;
     font-size: 1.5rem;
     z-index: 1000;
     transition: right 0.5s ease;
-    background-color: transparent;
+    background-color: #333;
   }
 
   .burger-menu.open {
     right: 190px;
+    background-color: transparent;
   }
 
 .navbar {
@@ -132,8 +133,7 @@
     height: 85vh;
     background: linear-gradient(to bottom, #555, #fff);
     position: relative;
-    overflow: hidden; /* Ensure the icons stay within the section */
-    padding-top: 3rem;
+    overflow: visible; /* Ensure the icons stay within the section */
   }
 
   .tech-stack-heading {

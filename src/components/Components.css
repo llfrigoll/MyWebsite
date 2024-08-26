@@ -202,19 +202,25 @@
     color: #333;
   }
 
-  .about-me > h1 {
+  .about-me-title {
     font-size: 60px;
     font-weight: 500;
     text-align: center;
-    border: none;
     width: fit-content;
     padding: 1rem;
+    padding-left : 3rem;
     margin-top: 6rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: -650px;
     padding-top: 2rem;
     letter-spacing: 2rem;
     word-spacing: 3rem;
+    opacity: 0;
+    transition: margin-left 1s ease, opacity 1s ease;
+  }
+
+  .about-me-title.visible {
+    margin-left: 462px;
+    opacity: 1;
   }
 
   .about-me-heading {

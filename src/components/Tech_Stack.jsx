@@ -46,7 +46,7 @@ const Tech_Stack = () => {
 
     let headingVisibilityPercentage = visibleHeadingHeight / headingHeight
 
-    if(headingVisibilityPercentage > 0.8 || visibilityPercentage > 0) {
+    if(headingVisibilityPercentage > 1 || visibilityPercentage > 0) {
       heading.classList.add('visible')
     }else {
       heading.classList.remove('visible')

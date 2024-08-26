@@ -1,11 +1,66 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Components.css'; // Import the CSS file for styling
 
 const About_Me = () => {
+
+    const handleScroll = () => {
+        const windowHeight = window.innerHeight;
+        const heading = document.getElementById("about-me-title")
+        const headingRect = heading.getBoundingClientRect()
+    
+        const headingHeight = headingRect.height;
+        const visibleHeadingHeight = Math.max(0, Math.min(headingRect.bottom, windowHeight) - Math.max(headingRect.top, 0));
+    
+        let headingVisibilityPercentage = visibleHeadingHeight / headingHeight
+    
+        if(headingVisibilityPercentage === 1) {
+          heading.classList.add('visible')
+        }else {
+          heading.classList.remove('visible')
+        }
+    
+        // const heading = document.getElementById('tech-stack-heading')
+        // const headingRect = heading.getBoundingClientRect()
+    
+        // const headingHeight = headingRect.height;
+        // const visibleHeadingHeight = Math.max(0, Math.min(headingRect.bottom, windowHeight) - Math.max(headingRect.top, 0));
+    
+        // let headingVisibilityPercentage = visibleHeadingHeight / headingHeight
+    
+        // if(headingVisibilityPercentage > 0.8 || visibilityPercentage > 0) {
+        //   heading.classList.add('visible')
+        // }else {
+        //   heading.classList.remove('visible')
+        // }
+    
+        // const heading = document.getElementById('tech-stack-heading')
+        // const headingRect = heading.getBoundingClientRect()
+    
+        // const headingHeight = headingRect.height;
+        // const visibleHeadingHeight = Math.max(0, Math.min(headingRect.bottom, windowHeight) - Math.max(headingRect.top, 0));
+    
+        // let headingVisibilityPercentage = visibleHeadingHeight / headingHeight
+    
+        // if(headingVisibilityPercentage > 0.8 || visibilityPercentage > 0) {
+        //   heading.classList.add('visible')
+        // }else {
+        //   heading.classList.remove('visible')
+        // }
+    }
+    
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
+
+
     return (
         <>
         <div className="about-me" id="about-me">
-            <h1>About me</h1>
+            <h1 className="about-me-title" id="about-me-title">About me</h1>
             <br />
             <div className="about-me-heading">
                 <h1>Who I am</h1>

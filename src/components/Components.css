@@ -127,29 +127,36 @@
 
   .tech-stack-section {
     height: 85vh;
-    background-color: #000;
+    background-color: #fff;
     position: relative;
+    overflow: hidden; /* Ensure the icons stay within the section */
+    margin-bottom: 20rem;
+    padding-top: 10rem;
   }
   
   .tech-stack-icons {
     display: flex;
+    gap: 150px;
+    position: relative;
     justify-content: center;
-    gap: 20px;
-    position: fixed;
-    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    opacity: 0; /* Base opacity */
+    transition: opacity 0.1s ease-in-out; /* Faster transition for smoother effect */
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
   
   .tech-stack-icons.visible {
-    opacity: 1;
+    opacity: calc(var(--visibility-percentage, 0)); /* Dynamically update opacity */
   }
   
+  
   .tech-icon {
-    width: 50px;
-    height: 50px;
-    /* Adjust size as needed */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the element circular */
+    overflow: visible;
   }
+  
   

@@ -17,14 +17,29 @@ const Tech_Stack = () => {
   const handleScroll = () => {
     const section = document.getElementById('tech-stack-section');
     const rect = section.getBoundingClientRect();
-
-    // Check if the section is within the viewport
-    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-      setIsVisible(true);
+  
+    // Calculate the percentage of the section that is visible
+    const windowHeight = window.innerHeight;
+    const sectionHeight = rect.height;
+  
+    // Determine the visible height of the section
+    const visibleHeight = Math.max(0, Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0));
+  
+    // Calculate the visibility percentage (0 to 1 scale)
+    let visibilityPercentage = visibleHeight / sectionHeight;
+  
+    // Apply threshold: only start showing icons if 25% of the section is visible
+    if (visibilityPercentage < 0.25) {
+      visibilityPercentage = 0; // Set opacity to 0 if less than 25% is visible
     } else {
-      setIsVisible(false);
+      visibilityPercentage = (visibilityPercentage - 0.25) / 0.75; // Normalize to start from 25% visibility
     }
+  
+    // Set the visibility percentage for the opacity
+    setIsVisible(visibilityPercentage);
   };
+  
+  
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -35,18 +50,22 @@ const Tech_Stack = () => {
 
   return (
     <div id="tech-stack-section" className="tech-stack-section">
-      <div className={`tech-stack-icons ${isVisible ? 'visible' : ''}`}>
-        {/* Add your tech stack icons here */}
+      <div className="tech-stack-icons visible" style={{ '--visibility-percentage': isVisible }} >
         <img src={bootstraplogo} alt="Bootstrap Logo" className="tech-icon" />
         <img src={csslogo} alt="CSS Logo" className="tech-icon" />
         <img src={gitlogo} alt="Git Logo" className="tech-icon" />
-        <img src={githublogo} alt="Github Logo" className="tech-icon" />
-        <img src={htmllogo} alt="HTML Logo" className="tech-icon" />
-        <img src={jslogo} alt="JavaScript Logo" className="tech-icon" />
+      </div>
+
+      <div className="tech-stack-icons visible" style={{ '--visibility-percentage': isVisible }} >
         <img src={reactlogo} alt="React Logo" className="tech-icon" />
         <img src={tailwindlogo} alt="Tailwind CSS Logo" className="tech-icon" />
         <img src={tslogo} alt="TypeScript Logo" className="tech-icon" />
-        {/* Add more icons as needed */}
+      </div>
+
+      <div className="tech-stack-icons visible" style={{ '--visibility-percentage': isVisible }} >
+        <img src={githublogo} alt="Github Logo" className="tech-icon" />
+        <img src={htmllogo} alt="HTML Logo" className="tech-icon" />
+        <img src={jslogo} alt="JavaScript Logo" className="tech-icon" />
       </div>
     </div>
   );

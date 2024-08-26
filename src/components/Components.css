@@ -1,4 +1,4 @@
-.navbar-container {
+  .navbar-container {
     position: relative;
   }
   
@@ -127,11 +127,29 @@
 
   .tech-stack-section {
     height: 85vh;
-    background-color: #fff;
+    background: linear-gradient(to bottom, #333, #fff);
     position: relative;
     overflow: hidden; /* Ensure the icons stay within the section */
-    margin-bottom: 20rem;
     padding-top: 10rem;
+  }
+
+  .tech-stack-heading {
+    background-color: #333;
+  }
+
+  .tech-stack-heading > h1 {
+    font-size: 60px;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    width: fit-content;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+    letter-spacing: 2rem;
+    word-spacing: 3rem;
   }
   
   .tech-stack-icons {
@@ -142,13 +160,21 @@
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0; /* Base opacity */
-    transition: opacity 0.1s ease-in-out; /* Faster transition for smoother effect */
+    transition: opacity 0.3s ease-in-out; /* Faster transition for smoother effect */
     margin-top: 50px;
     margin-bottom: 50px;
   }
   
   .tech-stack-icons.visible {
     opacity: calc(var(--visibility-percentage, 0)); /* Dynamically update opacity */
+  }
+
+  .tech-stack-icons > img {
+    transition: scale 0.3s ease-in-out;
+  }
+
+  .tech-stack-icons.visible > img {
+    scale: calc(var(--visibility-percentage, 0))
   }
   
   

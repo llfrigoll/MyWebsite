@@ -197,9 +197,9 @@
   .about-me {
     display: flex;
     background: #fff;
-    height: 85vh;
     flex-direction: column;
     color: #333;
+    margin-bottom: 6rem;
   }
 
   .about-me-title {
@@ -224,31 +224,45 @@
   }
 
   .about-me-heading {
-    margin-left: auto;
-    margin-right: auto;
+    opacity: 0;
+    margin-left: 1400px;
+    transition: margin-left 1s ease, opacity 1s ease;
     width: 65%;
-    text-align: center;
-    padding-bottom: 6rem;
+    text-align: left;
+    margin-bottom: 4rem;
   }
 
-  .about-me-heading > h1 {
+  .about-me-heading.visible {
+    margin-left: 266px;
+    opacity: 1;
+  }
+
+  .about-me-heading-title {
     font-size: 60px;
     padding-left: 1rem;
   }
 
-  .about-me-heading > h2 {
+  .about-me-heading-subtitle {
     color: #fff;
     margin-top: -2rem;
     padding: 0.5rem 1rem;
     background-color: #333;
     font-weight: 500;
-    margin-bottom: 6rem;
   }
 
-  .about-me-heading > p {
+  .about-me-heading-p {
     color: #333;
     padding: 0.5rem 1rem;
     background-color: #fff;
     font-weight: 500;
     text-align: left;
+    width: 65%;
+    margin-left: -650px;
+    opacity: 0;
+    transition: margin-left 1s ease, opacity 1s ease;
+  }
+
+  .about-me-heading-p.visible {
+    opacity: 1;
+    margin-left: 250px;
   }

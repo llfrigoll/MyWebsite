@@ -14,7 +14,8 @@
     font-size: 1.5rem;
     z-index: 1000;
     transition: right 0.5s ease;
-    background-color: #090a0f;
+    background-color: transparent;
+    mix-blend-mode: difference;
   }
 
   .burger-menu.open {
@@ -200,7 +201,6 @@
     background: #fff;
     flex-direction: column;
     color: #333;
-    margin-bottom: 6rem;
   }
 
   .about-me-title {
@@ -230,7 +230,7 @@
     transition: margin-left 1s ease, opacity 1s ease;
     width: 65%;
     text-align: left;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   .about-me-heading.visible {
@@ -269,8 +269,8 @@
   }
 
   .inbetween-fade {
-    height: 30vh;
-    background: linear-gradient(to bottom, #fff, #090a0f);
+    height: 60vh;
+    background: linear-gradient(to bottom, #fff 30%, #090a0f);
   }
 
   .placeholder {

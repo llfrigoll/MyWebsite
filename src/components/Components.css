@@ -188,7 +188,6 @@
     scale: calc(var(--visibility-percentage, 0));
   }
   
-  
   .tech-icon {
     width: 150px;
     height: 150px;
@@ -298,7 +297,6 @@
   .project {
     margin-bottom: 6rem;
     display: flex;
-    border: 2px solid red;
     padding: 2rem;
     gap: 2rem;
   }
@@ -306,17 +304,45 @@
   .project > img {
     height: 50vh;
     opacity: 0.8;
-    border: 2px solid red;
   }
 
-  .project > p {
-    border: 2px solid red;
-    height: 50vh;
-    width: 200px;
+  .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-container > p {
     margin: 0rem;
+    color: #fff;
+    line-height: 2rem;
+    width: 100%;
+    opacity: 0.9;
   }
 
-  .placeholder {
-    height: 100vh;
-    background-color: #fff;
+  .link-buttons {
+    color: #fff;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+  }
+
+  .link-buttons > div {
+    border-top: 2px solid white;
+    padding: 4px 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    font-size: 24px;
+    opacity: 0.9;
+  }
+
+  .link-buttons > div:hover {
+    transform: translateY(-30%);
+  }
+
+  .link-buttons > div > a {
+    text-decoration: none;
+    color: #fff;
   }

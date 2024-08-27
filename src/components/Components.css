@@ -14,7 +14,7 @@
     font-size: 1.5rem;
     z-index: 1000;
     transition: right 0.5s ease;
-    background-color: #333;
+    background-color: #090a0f;
   }
 
   .burger-menu.open {
@@ -266,4 +266,14 @@
   .about-me-heading-p.visible {
     opacity: 1;
     margin-left: 250px;
+  }
+
+  .inbetween-fade {
+    height: 30vh;
+    background: linear-gradient(to bottom, #fff, #090a0f);
+  }
+
+  .placeholder {
+    height: 100vh;
+    background-color: #fff;
   }

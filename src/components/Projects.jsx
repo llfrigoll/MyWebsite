@@ -4,8 +4,37 @@ import './Animated_bg.css';
 import podd from '../assets/Podd.png'
 import kanban from '../assets/Kanban.png'
 import cache from '../assets/CacheBank.png'
+import totop from '../assets/UpArrow.png'
 
 const Projects = () => {
+
+    const handleScroll = () => {
+        const windowHeight = window.innerHeight;
+        const imageList = document.querySelectorAll(".project")
+            imageList.forEach(image => {
+                const imageRect = image.getBoundingClientRect()
+            
+                const imageHeight = imageRect.height;
+                const visibleImageHeight = Math.max(0, Math.min(imageRect.bottom, windowHeight) - Math.max(imageRect.top, 0));
+            
+                let imageVisibilityPercentage = visibleImageHeight / imageHeight
+                console.log(imageVisibilityPercentage)
+                if(imageVisibilityPercentage > 0.7) {
+                    image.classList.add('visible')
+                }
+            })
+
+        }
+
+        useEffect(() => {
+            window.addEventListener('scroll', handleScroll);
+            return () => {
+            window.removeEventListener('scroll', handleScroll);
+            };
+        }, []);
+    
+    
+
     return (
         <>
             <div className="inbetween-fade-begin"></div>
@@ -16,7 +45,7 @@ const Projects = () => {
                 <div className="projects" id="projects">
                     <h1 className="projects-title" id="projects-title">Projects</h1>
                     <div className="project">
-                        <img src={podd}></img>
+                        <img className="project-image" id="project-image" src={podd}></img>
                         <div className="text-container">
                             <p>My Podd podcast application uses the Fetch API to pull podcast data and display it to the user for listening capabilities. A user is capable of selecting a show, followed by a season and selecting an episode from that season. A user is also capable of adding an episode of a show to their favourites allowing them to view them seperately and add and remove them as they please, along with being able to sort them alphabetically and by recently updated. Listening history as well as completed episodes are saved by the application and the user is able to reset all their history. A user is able to filter the shows on their dashboard alphabetically and by the most recently updated shows, a user is also able to filter their shows by genre and by using a searchbar.</p>
                             <div className="link-buttons">
@@ -34,11 +63,11 @@ const Projects = () => {
                                 <div><a href="https://github.com/llfrigoll/FRAPRE440_WFO2401_GroupA_Franz-Pretorius_JSL11" target="_blank">GitHub link</a></div>
                             </div>
                         </div>
-                        <img src={kanban}></img>
+                        <img className="project-image" id="project-image" src={kanban}></img>
                     </div>
 
                     <div className="project">
-                        <img src={cache}></img>
+                        <img className="project-image" id="project-image" src={cache}></img>
                         <div className="text-container">
                         <p>This project required us to create a landing page for a company called Cache Bank, the page includes a fully functional navbar with working links, it also includes a very comprehensive description of the website using different sections, it also includes hover and focus animations where necessary and includes relevant details for contacting the company and what they do.</p>
                             <div className="link-buttons">
@@ -50,7 +79,9 @@ const Projects = () => {
                     
                 </div>
             </div>
-            <div className="inbetween-fade-end"></div>
+            <div className="inbetween-fade-end">
+                <a href="#home"><img className="totop-image" id="totop-image" src={totop}></img></a>
+            </div>
         </>
       );
     };

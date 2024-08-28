@@ -275,6 +275,29 @@
   .inbetween-fade-end {
     height: 30vh;
     background: linear-gradient(to bottom, #090a0f, #fff);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .totop-image {
+    height: 6vh;
+    transform: translateY(30%);
+    transition: transform 0.3s ease;
+  }
+
+  .totop-image:hover {
+    animation: bounce 1s infinite;
+    cursor: pointer;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(30%);
+    }
+    50% {
+      transform: translateY(0);
+    }
   }
 
   .projects-title {
@@ -302,8 +325,22 @@
   }
 
   .project > img {
-    height: 50vh;
+    height: 0vh;
     opacity: 0.8;
+    transition: height 1s ease;
+  }
+
+  .project.visible > img {
+    height: 50vh;
+  }
+
+  .project > div {
+    opacity: 0;
+    transition: opacity 3s ease-in;
+  }
+
+  .project.visible > div {
+    opacity: 1;
   }
 
   .text-container {
@@ -350,4 +387,19 @@
   .footer {
     height: 30vh;
     background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-image {
+    height: 20%;
+    padding: 1rem;
+    justify-self: center;
+    margin-top: 3rem;
+    transition: transform 0.5s ease;
+  }
+
+  .footer-image:hover {
+    transform: translateY(-10%);
+    cursor: pointer;
   }

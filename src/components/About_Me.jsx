@@ -37,7 +37,6 @@ const About_Me = () => {
             const visiblePHeadingHeight = Math.max(0, Math.min(pHeadingRect.bottom, windowHeight) - Math.max(pHeadingRect.top, 0));
         
             let pHeadingVisibilityPercentage = visiblePHeadingHeight / pHeadingHeight
-        
             if(pHeadingVisibilityPercentage === 1) {
                 pHeading.classList.add('visible')
             }

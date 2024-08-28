@@ -131,7 +131,7 @@
   }
 
   .tech-stack-section {
-    height: 85vh;
+    height: 75vh;
     background: linear-gradient(to bottom, #555, #fff);
     position: relative;
     overflow: visible; /* Ensure the icons stay within the section */
@@ -165,15 +165,15 @@
   
   .tech-stack-icons {
     display: flex;
-    gap: 150px;
+    gap: 50px;
     position: relative;
     justify-content: center;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0; /* Base opacity */
     transition: opacity 0.2s ease-in-out; /* Faster transition for smoother effect */
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   
   .tech-stack-icons.visible {
@@ -185,7 +185,7 @@
   }
 
   .tech-stack-icons.visible > img {
-    scale: calc(var(--visibility-percentage, 0));
+    scale: calc(var(--visibility-percentage, 0) - 0.3);
   }
   
   .tech-icon {
@@ -209,7 +209,7 @@
     width: fit-content;
     padding: 1rem;
     padding-left : 3rem;
-    margin-top: 6rem;
+    margin-top: 3rem;
     margin-left: -650px;
     padding-top: 2rem;
     letter-spacing: 2rem;

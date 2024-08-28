@@ -403,3 +403,7 @@
     transform: translateY(-10%);
     cursor: pointer;
   }
+
+  .footer > p {
+    text-align: center;
+  }

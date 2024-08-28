@@ -273,8 +273,8 @@
   }
 
   .inbetween-fade-end {
-    height: 60vh;
-    background: linear-gradient(to bottom, #090a0f, #fff 60%);
+    height: 30vh;
+    background: linear-gradient(to bottom, #090a0f, #fff);
   }
 
   .projects-title {

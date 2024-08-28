@@ -4,6 +4,7 @@ import Home from './components/Home.jsx';
 import Tech_Stack from './components/Tech_Stack.jsx';
 import About_Me from './components/About_Me.jsx';
 import Projects from './components/Projects.jsx';
+import Footer from './components/Footer.jsx';
 import './App.css'; // Import your app’s CSS
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Tech_Stack />
       <About_Me />
       <Projects />
+      <Footer />
     </div>
   );
 };

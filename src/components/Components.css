@@ -346,3 +346,8 @@
     text-decoration: none;
     color: #fff;
   }
+
+  .footer {
+    height: 30vh;
+    background-color: #fff;
+  }

@@ -26,7 +26,7 @@ const Navbar = () => {
         <li className="navbar-item"><a href="#tech-stack-heading" onClick={toggleNavbar}>Tech Stack</a></li>
         <li className="navbar-item"><a href="#about-me" onClick={toggleNavbar}>About</a></li>
         <li className="navbar-item"><a href="#projects" onClick={toggleNavbar}>Projects</a></li>
-        <li className="navbar-item"><a href="#contact" onClick={toggleNavbar}>Contact</a></li>
+        <li className="navbar-item"><a href="#footer" onClick={toggleNavbar}>Contact</a></li>
       </ul>
     </nav>
     </div>

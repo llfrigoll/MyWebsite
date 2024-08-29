@@ -145,21 +145,21 @@
     font-size: 60px;
     color: #fff;
     font-weight: 500;
-    text-align: center;
     border: none;
-    width: fit-content;
+    width: 662px;
     margin-left: -650px;
-    padding: 1rem;
+    padding-left: 1rem;
     padding-top: 2rem;
     padding-bottom: 3rem;
     letter-spacing: 2rem;
     word-spacing: 3rem;
     opacity: 0;
-    transition: margin-left 1s ease, opacity 1s ease;
+    transition: margin-left 1s ease, margin-right 1s ease, opacity 1s ease;
   }
 
   .tech-stack-heading.visible > h1 {
-    margin-left: 416px;
+    margin-left: calc((100vw - 690px) / 2);
+    margin-right: calc((100vw - 698px) / 2);
     opacity: 1;
   }
   
@@ -205,8 +205,8 @@
   .about-me-title {
     font-size: 60px;
     font-weight: 500;
-    text-align: center;
-    width: fit-content;
+    text-align: left;
+    width: 627px;
     padding: 1rem;
     padding-left : 3rem;
     margin-top: 3rem;
@@ -215,25 +215,27 @@
     letter-spacing: 2rem;
     word-spacing: 3rem;
     opacity: 0;
-    transition: margin-left 1s ease, opacity 1s ease;
+    transition: margin-left 1s ease, margin-right 1s ease, opacity 1s ease;
   }
 
   .about-me-title.visible {
-    margin-left: 462px;
+    margin-left: calc((100vw - 627px) / 2);
+    margin-right: calc((100vw - 627px) / 2);
     opacity: 1;
   }
 
   .about-me-heading {
     opacity: 0;
     margin-left: 1400px;
-    transition: margin-left 1s ease, opacity 1s ease;
-    width: 65%;
+    transition: margin-left 1s ease, margin-right 1s ease, opacity 1s ease;
+    width: 65vw;
     text-align: left;
     margin-bottom: 3rem;
   }
 
   .about-me-heading.visible {
-    margin-left: 266px;
+    margin-left: calc((35vw) / 2);
+    margin-right: calc((35vw) / 2);
     opacity: 1;
   }
 
@@ -256,15 +258,16 @@
     background-color: #fff;
     font-weight: 500;
     text-align: left;
-    width: 65%;
+    width: 60vw;
     margin-left: -650px;
     opacity: 0;
-    transition: margin-left 1s ease, opacity 1s ease;
+    transition: margin-left 1s ease, margin-right 1s ease, opacity 1s ease;
   }
 
   .about-me-heading-p.visible {
     opacity: 1;
-    margin-left: 250px;
+    margin-left: calc((35vw) / 2);
+    margin-right: calc((45vw) / 2);
   }
 
   .inbetween-fade-begin {
@@ -325,13 +328,14 @@
   }
 
   .project > img {
-    height: 0vh;
+    height:fit-content;
+    width: 0vw;
     opacity: 0.8;
-    transition: height 1s ease;
+    transition: width 1s ease;
   }
 
   .project.visible > img {
-    height: 50vh;
+    width: 50vw;
   }
 
   .project > div {
